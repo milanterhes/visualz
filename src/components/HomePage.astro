@@ -1,0 +1,140 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tile from "../components/Tile.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Welcome to Astro.">
+    <main class="px-4 md:px-48 py-6 flex flex-col gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-2 justify-between">
+                <h2 class="text-2xl md:text-6xl font-bold">
+                    {t("home.intro")}
+                </h2>
+                <Tile
+                    img="/audia5_front.jpg"
+                    imgClass="rounded-xl"
+                    title={t("image.1.title")}
+                    url="https://www.tiktok.com/@kispeter_marko/video/7394158503473990945"
+                    link={t("image.1.link")}
+                />
+            </div>
+            <Tile
+                img="/tiffany_nails.jpg"
+                imgClass="rounded-xl max-h-[85svh]"
+                title={t("image.2.title")}
+                description={t("image.2.description")}
+                url="https://www.tiktok.com/@kispeter_marko/video/7394158503473990945"
+                link={t("image.2.link")}
+            />
+        </div>
+
+        <div class="grid gap-4">
+            <Tile
+                img="/audi_back.jpg"
+                imgClass="rounded-xl"
+                title={t("image.3.title")}
+                description={t("image.3.description")}
+                url="https://www.tiktok.com/@kispeter_marko/video/7390480391724961056"
+                link="TikTok videó"
+            />
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Tile
+                    img="/drift.jpg"
+                    imgClass="rounded-xl md:h-[500px] w-full object-cover"
+                    title={t("image.4.title")}
+                    description={t("image.4.description")}
+                />
+                <Tile
+                    img="/audi_top.jpg"
+                    imgClass="rounded-xl md:h-[500px] w-full object-cover"
+                    title={t("image.5.title")}
+                    url="https://www.tiktok.com/@kispeter_marko/video/7363333965509397792"
+                    link={t("image.5.link")}
+                />
+            </div>
+        </div>
+
+        <div
+            class="bg-[#89795A] rounded-xl p-6 text-xl font-semibold grid grid-cols-1 md:grid-cols-2 gap-10"
+        >
+            <div class="flex flex-col gap-2">
+                <p>
+                    {t("services.1")}
+                </p>
+                <p>
+                    {t("services.2")}
+                </p>
+                <p>
+                    {t("services.3")}
+                </p>
+            </div>
+            <ul class="list-disc list-inside">
+                <li>{t("service.1")}</li>
+                <li>{t("service.2")}</li>
+                <li>{t("service.3")}</li>
+                <li>{t("service.4")}</li>
+                <li>{t("service.5")}</li>
+                <li>{t("service.6")}</li>
+                <li>{t("service.7")}</li>
+            </ul>
+        </div>
+
+        <div
+            class="bg-[#B05B60] rounded-xl p-6 font-semibold md:grid md:grid-cols-2"
+        >
+            <p class="text-4xl leading-normal">
+                {t("outro")}
+            </p>
+            <div class="flex flex-col gap-2 my-4 items-end">
+                <a
+                    href="mailto:visualzbymarko@gmail.com"
+                    class="hover:underline">visualzbymarko@gmail.com</a
+                >
+                <a href="tel:+36307316642" class="hover:underline"
+                    >+36 30 7316642</a
+                >
+                <div class="flex align-center gap-1 hover:underline">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-arrow-up-right"
+                        ><path d="M7 7h10v10"></path><path d="M7 17 17 7"
+                        ></path></svg
+                    >
+                    <a href="https://www.tiktok.com/@kispeter_marko">TikTok</a>
+                </div>
+                <div class="flex align-center gap-1 hover:underline">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-arrow-up-right"
+                        ><path d="M7 7h10v10"></path><path d="M7 17 17 7"
+                        ></path></svg
+                    >
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61563496138744"
+                        >Facebook</a
+                    >
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
