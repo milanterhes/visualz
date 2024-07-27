@@ -1,0 +1,143 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tile from "../components/Tile.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="px-4 md:px-48 py-6 flex flex-col gap-6">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="flex flex-col gap-2 justify-between">
+				<h2 class="text-2xl md:text-6xl font-bold">
+					Segítek márkáját hatékonyan megjeleníteni, legyen szó webes,
+					közösségi média vagy hagyományos hirdetési felületekről.
+				</h2>
+				<Tile
+					img="public/audia5_front.jpg"
+					imgClass="rounded-xl"
+					title="Jármű fotózás eladásra"
+					url="https://www.tiktok.com/@kispeter_marko/video/7394158503473990945"
+					link="Galéria"
+				/>
+			</div>
+			<Tile
+				img="public/tiffany_nails.jpg"
+				imgClass="rounded-xl max-h-[85svh]"
+				title="Tiffany nails"
+				description="Marketing fotózás és videózás"
+				url="https://www.tiktok.com/@kispeter_marko/video/7394158503473990945"
+				link="TikTok videó"
+			/>
+		</div>
+
+		<div class="grid gap-4">
+			<Tile
+				img="public/audi_back.jpg"
+				imgClass="rounded-xl"
+				title="Audi S8"
+				description="Fotózás és videózás"
+				url="https://www.tiktok.com/@kispeter_marko/video/7390480391724961056"
+				link="TikTok videó"
+			/>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+				<Tile
+					img="public/drift.jpg"
+					imgClass="rounded-xl md:h-[500px] w-full object-cover"
+					title="Drift go brr"
+					description="drift"
+				/>
+				<Tile
+					img="public/audi_top.jpg"
+					imgClass="rounded-xl md:h-[500px] w-full object-cover"
+					title="Audi fotózás és videózás"
+					url="https://www.tiktok.com/@kispeter_marko/video/7363333965509397792"
+					link="TikTok videó"
+				/>
+			</div>
+		</div>
+
+		<div
+			class="bg-[#89795A] rounded-xl p-6 text-xl font-semibold grid grid-cols-1 md:grid-cols-2 gap-10"
+		>
+			<div class="flex flex-col gap-2">
+				<p>
+					Sokoldalú vizuális tartalomkészítő vagyok, aki bármilyen
+					formátumban képes létrehozni hatékony marketinganyagokat.
+				</p>
+				<p>
+					Szolgáltatásaim között szerepel professzionális
+					termékfotózás, lenyűgöző reklámvideók készítése, és kreatív
+					videószerkesztés.
+				</p>
+				<p>
+					Legyen szó webes tartalomról, közösségi média kampányról
+					vagy hagyományos hirdetésről, segítek vizuálisan
+					megjeleníteni és kiemelni az Ön márkáját.
+				</p>
+			</div>
+			<ul class="list-disc list-inside">
+				<li>Termékvideók</li>
+				<li>Termék képek</li>
+				<li>Promóciós videók</li>
+				<li>Cégbemutató</li>
+				<li>Fotózás</li>
+				<li>Járművek videózása és fotózása</li>
+				<li>Egyéb</li>
+			</ul>
+		</div>
+
+		<div
+			class="bg-[#B05B60] rounded-xl p-6 font-semibold md:grid md:grid-cols-2"
+		>
+			<p class="text-4xl leading-normal">
+				Nyitott vagyok új lehetőségekre és projektekre. Nyugodtan
+				keressen meg.
+			</p>
+			<div class="flex flex-col gap-2 my-4 items-end">
+				<a
+					href="mailto:visualzbymarko@gmail.com"
+					class="hover:underline">visualzbymarko@gmail.com</a
+				>
+				<a href="tel:+36307316642" class="hover:underline"
+					>+36 30 7316642</a
+				>
+				<div class="flex align-center gap-1 hover:underline">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="lucide lucide-arrow-up-right"
+						><path d="M7 7h10v10"></path><path d="M7 17 17 7"
+						></path></svg
+					>
+					<a href="https://www.tiktok.com/@kispeter_marko">TikTok</a>
+				</div>
+				<div class="flex align-center gap-1 hover:underline">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="lucide lucide-arrow-up-right"
+						><path d="M7 7h10v10"></path><path d="M7 17 17 7"
+						></path></svg
+					>
+					<a
+						href="https://www.facebook.com/profile.php?id=61563496138744"
+						>Facebook</a
+					>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
