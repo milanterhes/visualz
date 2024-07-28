@@ -30,6 +30,7 @@ export const ui = {
         'image.3.description': 'Photography and videography',
         'image.3.link': 'TikTok video',
         'image.4.title': '2024 Tököl Drift',
+        'image.4.link': 'TikTok video',
         'image.5.title': 'Tiffany Nails',
         'image.5.description': 'Audi photography and videography',
         'image.5.link': 'TikTok video',
@@ -57,6 +58,7 @@ export const ui = {
         'image.3.description': 'Fotografie und Videografie',
         'image.3.link': 'TikTok video',
         'image.4.title': '2024 Tököl Drift',
+        'image.4.link': 'TikTok video',
         'image.5.title': 'Audi Fotografie und Videografie',
         'image.5.link': 'TikTok video',
     },
@@ -83,6 +85,7 @@ export const ui = {
         'image.3.description': 'Fotózás és videózás',
         'image.3.link': 'TikTok videó',
         'image.4.title': '2024 Tököl Drift',
+        'image.4.link': 'TikTok videó',
         'image.5.title': 'Audi fotózás és videózás',
         'image.5.link': 'TikTok videó',
     }
