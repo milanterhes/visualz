@@ -11,67 +11,67 @@ const t = useTranslations(lang);
 
 <!doctype html>
 <html lang={lang} class="dark">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<SEO
-			title="Marko Visualz"
-			description={t("home.intro")}
-			openGraph={{
-				basic: {
-					title: "Marko Visualz",
-					type: "website",
-					image: "/drift.jpg",
-				},
-			}}
-			extend={{
-				meta: [
-					{
-						name: "twitter:image",
-						content: "/drift.jpg",
-					},
-					{
-						name: "twitter:title",
-						content: "Marko Visualz",
-					},
-					{ name: "twitter:description", content: t("home.intro") },
-				],
-			}}
-			,
-			languageAlternates={[
-				{ href: "/", hrefLang: "hu" },
-				{ href: "/en", hrefLang: "en" },
-				{ href: "/de", hrefLang: "de" },
-			]}
-		/>
-	</head>
-	<body class="bg-black text-white">
-		<Header />
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+      title="Marko Visualz"
+      description={t("home.intro")}
+      openGraph={{
+        basic: {
+          title: "Marko Visualz",
+          type: "website",
+          image: "/drift.webp",
+        },
+      }}
+      extend={{
+        meta: [
+          {
+            name: "twitter:image",
+            content: "/drift.webp",
+          },
+          {
+            name: "twitter:title",
+            content: "Marko Visualz",
+          },
+          { name: "twitter:description", content: t("home.intro") },
+        ],
+      }}
+      ,
+      languageAlternates={[
+        { href: "/", hrefLang: "hu" },
+        { href: "/en", hrefLang: "en" },
+        { href: "/de", hrefLang: "de" },
+      ]}
+    />
+  </head>
+  <body class="bg-black text-white">
+    <Header />
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	html {
-		scroll-behavior: smooth;
-	}
-	@font-face {
-		font-family: "bdo";
-		src: url("/fonts/bdo.ttf") format("ttf");
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
+  html {
+    scroll-behavior: smooth;
+  }
+  @font-face {
+    font-family: "bdo";
+    src: url("/fonts/bdo.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
-	.fiCircle {
-		width: 24px;
-		height: 24px;
-		font-size: 24px;
-		border-radius: 100%;
-		border: none;
-		box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.06);
-		background: white;
-	}
+  .fiCircle {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    border-radius: 100%;
+    border: none;
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.06);
+    background: white;
+  }
 </style>
