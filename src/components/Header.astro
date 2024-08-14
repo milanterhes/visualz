@@ -1,28 +1,15 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import LanguagePicker from "./react/LanguagePicker";
-import { getRelativeLocaleUrl } from "astro:i18n";
+import LanguagePicker from "./LanguagePicker.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-const links = [
-    { code: "hu", text: "Magyar", link: getRelativeLocaleUrl("hu", "") },
-    { code: "de", text: "Deutsch", link: getRelativeLocaleUrl("de", "") },
-    { code: "gb", text: "English", link: getRelativeLocaleUrl("en", "") },
-];
-
-let countryCode: string = lang;
-
-if (lang === "en") {
-    countryCode = "gb";
-}
 ---
 
 <div class="grid grid-cols-3 gap-4 px-4 md:px-48 sticky top-0 z-20">
-    <LanguagePicker client:load countryCode={countryCode} links={links} />
-    <h1 class="place-self-center text-xl md:text-6xl text-nowrap">
-        Marko Visualz
-    </h1>
-    <a class="place-self-end self-center" href="#contact">{t("nav.contact")}</a>
+  <LanguagePicker />
+  <h1 class="place-self-center text-xl md:text-6xl text-nowrap">
+    Marko Visualz
+  </h1>
+  <a class="place-self-end self-center" href="#contact">{t("nav.contact")}</a>
 </div>

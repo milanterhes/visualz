@@ -1,0 +1,43 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
+const links = [
+  { code: "hu", text: "Magyar", link: getRelativeLocaleUrl("hu", "") },
+  { code: "de", text: "Deutsch", link: getRelativeLocaleUrl("de", "") },
+  { code: "gb", text: "English", link: getRelativeLocaleUrl("en", "") },
+];
+
+let countryCode: string = lang;
+
+if (lang === "en") {
+  countryCode = "gb";
+}
+---
+
+<div class="flex items-center">
+  <div class="dropdown">
+    <div tabindex="0" role="button" class="btn btn-ghost">
+      <span class={`fi fis fi-${countryCode} fiCircle my-2`}></span>
+    </div>
+    <ul
+      tabindex="0"
+      class="dropdown-content menu bg-base-100 rounded-box z-[1] w-fit p-2 shadow"
+    >
+      {
+        links.map((item) =>
+          item.code != countryCode ? (
+            <li>
+              <a class="p-2 flex gap-2 items-center" href={item.link}>
+                <span class={`fi fis fi-${item.code} fiCircle my-2`} />
+                <span>{item.text}</span>
+              </a>
+            </li>
+          ) : null
+        )
+      }
+    </ul>
+  </div>
+</div>
